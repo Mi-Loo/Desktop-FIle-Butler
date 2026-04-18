@@ -25,10 +25,12 @@ File Butler runs quietly in the background and does the tedious work of keeping 
 
 # Tech Stack
 - Python: Core agent logic and file watching
-- Flask: Local API server handling events and actions
+- Flask + Flask-CORS: Local API server handling events and actions from the browser dashboard
 - Ollama + Llama 3: Local LLM for PDF analysis and summarization
-- HTML/CSS/JavaScript: Browser-based dashboard UI
 - watchdog: File system event monitoring
+- PyPDF2: PDF text extraction
+- Pillow: Image processing and file type detection
+- HTML/CSS/JavaScript: Browser-based dashboard UI
 
 # Prerequisites
 - macOS (built and tested on Apple Silicon)
@@ -45,10 +47,21 @@ File Butler runs quietly in the background and does the tedious work of keeping 
 - pip install -r requirements.txt
 
 > lMake sure Ollama is running and has Llama 3
+- ollama serve
 - ollama pull llama3
 
 > Run the agent
 - python3 butler.py
+
+# Screenshots
+> Browser Dashboard
+The dashboard shows all detected files, their suggested destinations, and lets you approve or reject each action.
+<img width="1608" height="1041" alt="Screenshot 2026-04-17 at 2 02 26 PM" src="https://github.com/user-attachments/assets/63c9dbf5-807f-4af1-9490-ac1948212f92" />
+>Terminal Backend
+The Python backend connects to Llama 3 via Ollama and starts watching your folders through a Flask server.
+<img width="972" height="611" alt="Screenshot 2026-04-17 at 2 01 36 PM" src="https://github.com/user-attachments/assets/e575a1a7-76a4-4c0b-b2df-e77e8c2befae" />
+
+
 
 # Why I Built This
 My Downloads folder was a disaster. Hundreds of files piling up — screenshots, installers, random PDFs, duplicates of duplicates. I wanted something that would just handle it without me having to think about it, but I also didn't want to give a cloud service access to all my files.
