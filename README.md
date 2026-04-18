@@ -54,10 +54,13 @@ File Butler runs quietly in the background and does the tedious work of keeping 
 - python3 butler.py
 
 # Screenshots
-> Browser Dashboard
+> Browser Dashboard:
 The dashboard shows all detected files, their suggested destinations, and lets you approve or reject each action.
 <img width="1608" height="1041" alt="Screenshot 2026-04-17 at 2 02 26 PM" src="https://github.com/user-attachments/assets/63c9dbf5-807f-4af1-9490-ac1948212f92" />
->Terminal Backend
+
+>   
+
+> Terminal Backend:
 The Python backend connects to Llama 3 via Ollama and starts watching your folders through a Flask server.
 <img width="972" height="611" alt="Screenshot 2026-04-17 at 2 01 36 PM" src="https://github.com/user-attachments/assets/e575a1a7-76a4-4c0b-b2df-e77e8c2befae" />
 
