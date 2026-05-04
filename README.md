@@ -40,8 +40,8 @@ File Butler runs quietly in the background and does the tedious work of keeping 
 
 # Setup
 > Clone the repo
-- git clone https://github.com/m1l0u/Project_1_File-Butler.git
-- cd Project_1_File-Butler
+- git clone https://github.com/Mi-Loo/Desktop-FIle-Butler.git
+- cd Desktop-FIle-Butler
 
 > Install dependencies
 - pip install -r requirements.txt
